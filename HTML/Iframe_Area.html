@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframe and Area</title>
+</head>
+<body>
+    <pre>
+        <p>ما هو العنصر المناسب لوضعه داخل النموذج لإرسال البيانات عند الضغط عليه ؟</p>
+        <code> &lt;input type="submit"></code>
+        <p>    ما هو العنصر المناسب ليكون عنوان للصفحة كاملة؟</p>
+        <code>&lt;h1>/&lt;h1></code>
+        
+        <p> ما هو العنصر المناسب ليكون عنوان لقسم داخل الصفحة؟</p>
+        <code> &lt;h2>/&lt;h2> or &lt;h3>/&lt;h3> or &lt;h4>/&lt;h4> or &lt;h5>/&lt;h5> or &lt;h6>/&lt;h6></code>
+        
+        <p> ما هو العنصر المناسب ليحتوي على فقرة نصية؟</p>
+        <code> &lt;p>/&lt;p></code>
+        
+        <bdi>Attributes</bdi> كيف تحدد لغة المحتوى الخاص بصفحتك. يمكنك كتابة العنصر الكامل مع ال
+        الخاصة بتحديد اللغة؟
+        <code> &lt;html lang="en">/&lt;html></code>
+        
+        <p>ي عالم ال Accessibility هل الأفضل أن أكتب 10 – 20 أم 10 To 20</p>
+        <code>10 to 20</code>
+        
+        <p>إذا كان لديك عنصر Div وتريد الوصول إليه عن الطريق الضغط على ال Tab Button ماذا سوف تفعل في العنصر ؟</p>
+        <code> I will make aria role with button and make tabindex=0</code>
+        
+        
+        <p>ماذا تعني كلمة ARIA</p>
+        <code> Accessible Rich Internet Applications</code>
+        
+        
+        <!-- Assignment #2 -->
+        
+        <div class="choose-skill" role="form">
+            <div class="skill" role="checkbox" tabindex="0" aria-labelledby="skill#1">Python</div>
+            <label id="skill#1">Skill One</label>
+            <div class="skill" role="option"  tabindex="1" aria-labelledby="skill#2">PHP</div>
+            <label id="skill#2">Skill Two</label>
+            <div class="skill" role="option"  tabindex="2" aria-labelledby="skill#3" >JavaScript</div>
+            <label id="skill#3">Skill Three</label>
+        </div>
+    </pre>
+    
+    
+</body>
+</html>
