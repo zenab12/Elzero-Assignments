@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border, Outline, Display </title>
+    <style>
+        div.assignment1 div{display: inline-block;text-align: center;margin:50px 10px;outline: 5px solid #000;background-color: #ccc;padding:40px;border:5px solid #f00}
+        div.assignment1 div:nth-of-type(2) {border:5px solid #008;border-left:5px solid #080;border-right:5px solid #080;}
+        div.assignment1 div:nth-of-type(3) {border:5px dashed #008;border-left:5px dashed yellow;border-right:5px dashed #080;border-top:5px dashed #f00;}
+
+        div.assignment2 div{width:400px;padding:10px;background-color: #eee;font-size: 18px;}
+        div.assignment2 div:nth-of-type(2){visibility:hidden;}
+        div.assignment2 div::before{content: "|";display:inline-block;color:rgb(243, 39, 110);font-size: 30px;font-weight: bold;margin-right:10px;}
+        div.assignment2 div:last-of-type::before{content: "|";display:inline-block;color:rgb(39, 30, 143);font-size: 30px;font-weight: bold;margin-right:10px;}
+
+    </style>
+</head>
+<body>
+<!--Assignment #1-->
+    <div class="assignment1">
+        <div>Shape 1</div>
+        <div>Shape 2</div>
+        <div>Shape 3</div>
+    </div>
+    <hr>
+<!--Assignment #1-->
+    <div class="assignment2">
+        <div>This Is Important Note</div>
+        <div>This Is Important Note</div>
+        <div>This Is Important Note</div>
+    </div>
+</body>
+</html>
