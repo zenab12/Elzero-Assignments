@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nesting and diminsions and iv erflow</title>
+    <style>
+        .child .title{color:#f00}
+        span.title{color:#008}
+        .parent p, div.title{color:#080}
+        
+        .assignment2 p{width:fit-content;max-width: 400px;padding: 10px;color:#fff;background-color: rgb(132, 37, 37);}
+        .assignment2 p:last-of-type{height:70px;overflow: hidden;}
+    </style>
+</head>
+<body>
+<!--Assignment1-->
+    <div class="parent">
+        <div class="child">This Is Child <span class="title">Title</span></div>
+        <span class="title">Child Title</span>
+        <p>Paragraph Content</p>
+    </div>
+    <div class="title">Section Title</div>
+<!--Assignment2-->
+<div class="assignment2">
+    <p>Title One</p>
+    <p>Title Two With More Words</p>
+    <p>Title Three With Many Many Many Words</p>
+    <p>Title Three With More Words Title Three With More Words Title Three With More Words Title Three With More Words Title Three With More Words Title Three With More Words Title Three With More Words Title Three With More Words Title Three With More Words Title Three With More Words Title Three With More Words Title Three With More Words Title Three With More Words</p>
+</div>
+
+</body>
+</html>
