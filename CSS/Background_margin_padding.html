@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background and Margin and Padding</title>
+    <style>
+        .assignment1 div{width:500px;margin:10px auto;padding:20px;background-color: blueviolet;/*#8a2be2,hsl(271, 76%, 53%),rgb(138, 44, 226)*/;color:#fff;}
+        .assignment1 div:nth-of-type(2){background-color:rgba(138, 44, 226,0.5)}
+        .assignment1 div:nth-of-type(3){background-color:rgba(138, 44, 226,0.25)}
+        
+        .assignment2 div, .assignment3 div,.assignment4 div{width:400px;height: 400px;background-color: #eee;margin:20px auto;color:#fff;padding: 5px;}
+        .assignment2 div:first-of-type, .assignment3 div:first-of-type{background: #eee url(../imgs/css-assignment-5-8.png) 0% 0%/50% no-repeat ;} 
+        .assignment2 div:nth-of-type(2){background: #eee url(../imgs/css-assignment-5-8.png) 0% 0%/50% repeat-y ;} 
+        .assignment2 div:nth-of-type(3){background: #eee url(../imgs/css-assignment-5-8.png) 0% 0%/50% repeat-x ;} 
+        .assignment2 div:nth-of-type(4),  .assignment3 div:nth-of-type(4){background: #eee url(../imgs/css-assignment-5-8.png) 0% 0%/50% repeat ;} 
+        
+        .assignment3 div:nth-of-type(2){background: #eee url(../imgs/css-assignment-5-8.png) 100% 0%/50% repeat-y ;} 
+        .assignment3 div:nth-of-type(3){background: #eee url(../imgs/css-assignment-5-8.png) 100% 100%/50% repeat-x ;} 
+        
+        .assignment4 div:first-of-type{background: #eee url(../imgs/css-assignment-5-8.png) 0% 0%/80% no-repeat ;} 
+        .assignment4 div:nth-of-type(2){background: #eee url(../imgs/css-assignment-5-8.png) 100% 0%/80% repeat-y ;} 
+        .assignment4 div:nth-of-type(3){background: #eee url(../imgs/css-assignment-5-8.png) 100% 100%/80% repeat-x ;} 
+        .assignment4 div:nth-of-type(4){background: #eee url(../imgs/css-assignment-5-8.png) 100% 100%/50% no-repeat ;} 
+        
+    </style>
+</head>
+<body>
+    <!--Assignment #1-->
+    <div class="assignment1">
+        <div class="assign-1-shape-1">Normal Div</div>
+        <div class="assign-1-shape-2">Normal Div</div>
+        <div class="assign-1-shape-3">Normal Div</div>
+    </div>
+    <hr>
+    <!--Assignment #2-->
+    <div class="assignment2">
+        <div class="assign-2-shape-1">Shape 1</div>
+        <div class="assign-2-shape-2">Shape 2</div>
+        <div class="assign-2-shape-3">Shape 3</div>
+        <div class="assign-2-shape-4">Shape 4</div>
+    </div>
+    <hr>
+    <!--Assignment #3-->
+    <div class="assignment3">
+        <div class="assign-3-shape-1">Shape 1</div>
+        <div class="assign-3-shape-2">Shape 2</div>
+        <div class="assign-3-shape-3">Shape 3</div>
+        <div class="assign-3-shape-4">Shape 4</div>
+    </div>
+    <hr>
+    <!--Assignment #3-->
+    <div class="assignment4">
+        <div class="assign-4-shape-1">Shape 1</div>
+        <div class="assign-4-shape-2">Shape 2</div>
+        <div class="assign-4-shape-3">Shape 3</div>
+        <div class="assign-4-shape-4">Shape 4</div>
+    </div>
+</body>
+</html>
