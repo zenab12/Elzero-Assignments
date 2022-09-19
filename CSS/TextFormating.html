@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Formating</title>
+    <style>
+        body{ font-family:fantasy;}
+        h1 {
+            text-shadow:1px 1px #f40,
+                        2px 2px #05f,
+                        3px 3px #80c;
+            font-size: 40px;
+            text-align: center;}
+            
+        div.assignment2 p{text-align: center;font-size: 30px;font-weight: 700; }
+        div.assignment2 p.one{text-transform: uppercase;}
+        div.assignment2 p.two{text-transform:capitalize}
+        div.assignment2 p.three{text-transform: lowercase;}
+        div.assignment3 {width:400px;background-color: #eee;margin: 20px auto;padding: 10px;}
+        
+        div.assignment3.c{white-space:nowrap;overflow: hidden;text-overflow:ellipsis;}
+        a{background: #088;text-align: center;color: #fff;display: block;margin: 10px auto;padding: 10px;font-size: 25px;width: 100px;text-decoration: none;}
+        a::after{content: "";width: 120%;height: 10px;display: block;background-color: #055;position: relative;top: 10px;left: -10px;}
+        </style>
+</head>
+<body>
+<!--Assignment #1-->
+    <h1>Elzero Web School</h1>
+    
+    <hr>
+    <!--Assignment #2-->
+    <div class="assignment2">
+        <p class="one">elzero Web school</p>
+        <p class="two">elzero Web school</p>
+        <p class="three">elzero Web school</p>
+    </div>
+    <hr>
+    
+    <!--Assignment #3-->
+    <div class="assignment3 a">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        Ea itaque fugit vitae incidunt quis dolores? Id alias
+        eveniet sequi perspiciatis iusto impedit,
+        accusamus maxime reprehenderit blanditiis adipisci sapiente hic velit.
+    </div>
+    <div class="assignment3 b">
+        Lorem ipsum dolor sit amet consectetur
+    </div>
+    <div class="assignment3 c">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        Ea itaque fugit vitae incidunt quis dolores? Id alias
+        eveniet sequi perspiciatis iusto impedit,
+        accusamus maxime reprehenderit blanditiis adipisci sapiente hic velit.
+    </div>
+    <!--Assignment4-->
+    <a href="https://elzero.org">elzero</a>
+</body>
+</html>
