@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float and Opacity</title>
+    <style>
+    .parent{background: rgb(220, 218, 218);width: 1000px;box-sizing: border-box;margin: 20px auto;}
+    .parent div{float: left;gap:10px;background-color: #eee;text-align: center;margin:10px;padding: 10px;box-sizing: border-box;font-weight: bold;}
+    .parent .full{width: calc(100%  - 20px);;}
+    .parent .threequarter{width:calc(100% /3 - 20px);}
+    .parent .quarter{width:calc(100% /4 - 20px);}
+    .parent .half{width:calc(100% /2 - 20px);}
+    .clear{clear: both;}
+
+    div.assignment2 div {margin: 20px auto;width: 300px;font-weight: bold;font-size: 1rem;padding: 20px;background-color:#b3b3b3;color: black;}
+    div.assignment2 div:nth-of-type(2){background-color:#f6f6f6;}
+    div.assignment2 div:nth-of-type(3){opacity: .1;}
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="full">Full Width</div>
+        <div class="threequarter">1/3</div>
+        <div class="threequarter">1/3</div>
+        <div class="threequarter">1/3</div>
+        <div class="half">1/2</div>
+        <div class="half">1/2</div>
+        <div class="quarter">1/4</div>
+        <div class="quarter">1/4</div>    
+        <div class="quarter">1/4</div>
+        <div class="quarter">1/4</div>
+        <p class="clear"></p>
+    </div>
+    <br>
+    <br>
+    <hr>
+    <!--Assignment 2-->
+    <div class="assignment2">
+        <div class="normal">Normal</div>
+        <div class="one">One</div>
+        <div class="two">Two</div>
+    </div>
+</body>
+</html>
