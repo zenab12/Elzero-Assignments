@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border Radius and Box shadow</title>
+    <style>
+        .assignment1{counter-reset: divscounter;margin:50px auto;width:400px;}
+        .assignment1 div{ width:100px; height:100px;border-radius:50%;border:5px solid #000;background-color: #eee;counter-increment: divscounter;position:relative;margin:10px ; display: inline-block;box-shadow: 6px 6px 0px 0px rgb(0, 183, 255),-6px -6px 0px 0px rgb(255, 0, 123);; }
+        .assignment1 div::before{content: counter(divscounter);display: block;text-align: center;background-color: #000;color:#fff;padding:10px 15px;position:absolute;top:-16px;left:31px ;border-radius:50%}
+        .assignment1 div::after{content: "element" ;display: block;text-align: center;line-height: 100px;}
+
+        .assignment2 div {width:100px ; height:100px;margin:20px auto;;box-shadow:inset 0px 2px 6px 6px #a2a2a2;border-radius:5px 50% 5px 50%;}
+    
+        .assignment3 {width:550px;margin: 20px auto;overflow: hidden;font-weight: bold;}
+        .assignment3 div.card{position:relative;width:calc(100%/2 - 40px);margin: 20px;padding: 15px;box-sizing: border-box;float: left;background-color: rgb(237, 233, 233);}
+        .assignment3 div.card .plan{width:calc(100% - 10px);text-align: center;padding:5px;color:#fff;border-radius:5px;background-color: rgb(82, 186, 238);}
+        .assignment3 div.card .price{width:150px;height:150px;margin:20px auto;text-align: center;border-radius:50%;background-color: rgb(208, 207, 207);line-height: 150px;}
+        .assignment3 div.card:first-of-type::after{content: "";width:3px;height:100%;display: block;background-color:rgb(82, 186, 238);position: absolute;top:0px; right:-20px}
+        .assignment3 div.card:first-of-type::before{content: "or";color:#fff;line-height:25px;text-align:center;width:25px;height:25px;border-radius: 50%;display: block;background-color:rgb(82, 186, 238);position: absolute;top:45%; right:-30px;z-index:3;}
+
+    </style>
+</head>
+<body>
+    <!--Assignment1-->
+    <div class="assignment1">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <hr>
+    <!--Assignment2-->
+    <div class="assignment2">
+        <div></div>
+    </div>
+    <hr>
+    <!--Assignment3-->
+    <div class="assignment3">
+        <div class="card">
+            <div class="plan">Basic</div>
+            <div class="price">Free</div>
+        </div>
+        <div class="card">
+            <div class="plan">Pro</div>
+            <div class="price">$30</div>
+        </div>
+    </div>
+</body>
+</html>
