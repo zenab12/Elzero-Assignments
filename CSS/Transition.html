@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition and Variables</title>
+    <style>
+        :root {
+            --mainColor: #009688;
+            --mainPadding: 10px;
+        }
+
+        .parent{background-color: #f0f0f0;width:400px;padding:20px;margin:50px auto;text-align: center;transition: all .5s linear;}
+        .child{background-color: #e6e5e5;padding:10px;margin-top:10px;transition: all .5s ease-in-out;margin-bottom: 100px;;}
+        .parent:hover
+        {
+        margin-top:-20px
+        }
+        .parent:hover .child
+        {
+        margin-top:20px
+        }
+
+        div.assignment2{
+            margin:20px auto;
+            width:400px;
+            font-size:20px !important;
+            background-color: #eee !important;
+            color: #eee !important; 
+            padding:15px !important;
+            padding-bottom:30px !important;
+            border:none !important;
+        }
+        div.assignment2::after
+        {
+            display: block;
+            content: "Elzero";
+            color: #000 !important;
+            text-align: center;
+            width:100%;
+        }
+        
+        div.assignment3 div {padding: var(--mainPadding,10px); color:var(--mainColor,red);border:3px solid var(--mainColor,#000);width:400px;margin:10px auto}
+    </style>
+</head>
+<body>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!--Assignment1-->
+    <div class="parent assignment1">
+        Will Go Up on Hover in Half second
+        <div class="child">Will Go Down on Hover in Half second</div>
+    </div>
+    <!--Assignment2-->
+    <div class="assignment2" style="
+        background-color: red;
+        color: white;
+        padding: 20px;
+        border: 1px solid blue;
+        font-size: 80px;">
+        Hello Div
+    </div>
+    <!--assignment3-->
+    
+    <div class="assignment3">
+        <div>Element</div>
+        <div>Element</div>
+        <div>Element</div>
+    </body>
+</body>
+</html>
