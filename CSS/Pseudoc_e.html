@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo classes and elements </title>
+    <style>
+        .assignment1 div{width:300px;height:60px;background-color: #eee;margin:10px auto;text-align: center;line-height: 60px;}
+        .assignment1 div:empty{background-color: #f00;}
+        
+        .assignment2,.assignment3 p {background-color: #eee;margin: 50px auto;padding: 10px;width: 300px;}
+        .assignment2::first-letter{background-color: #f00;color:#fff;padding: 10px;font-weight: bold;text-align: center;margin-left:-20px;margin-right: 10px;}
+    
+        .assignment3 p{ width:350px;border-left:5px solid rgb(100, 29, 58);position:relative;}
+        .assignment3 p::before{content:"";display: block;position:absolute;left:-23px;width:0px;top:10px;border-left:10px solid transparent;border-right: 10px solid rgb(100, 29, 58); border-top: 10px solid transparent; border-bottom: 10px solid transparent;}
+        .assignment3 p::after{content:attr(data-person);display: block;position:absolute;left:-100px;background-color: #eee;padding:10px;top:0px;}
+    
+        .assignment4 {counter-reset: elementsCounter 0;margin:5px auto;width:400px;}
+        .assignment4 p{counter-increment: elementsCounter 1; position: relative;padding: 10px;background-color: #eee;width:350px;border-right:5px solid rgb(228, 71, 23)}
+        .assignment4 p::before{content: counter(elementsCounter,decimal);display: block;padding: 10px 20px;background-color: rgb(228, 71, 23);position:absolute;left:-43px;top:0px;color:#fff;}
+
+    </style>
+</head>
+<body>
+    <!--Assignment 1-->
+    <div class="assignment1">
+        <div>One</div>
+        <div></div>
+        <div>Three</div>
+    </div>
+    <!--Assignment 2-->
+    <div class="assignment2">1 Hello, Welcome To Elzero Web School</div>
+    
+    <!--Assignment 3-->
+    <div class="assignment3">
+        <p data-person="Osama">This Is Very Very Long Comment Number One</p>
+        <p data-person="Ahmed">This Is Very Very Long Comment Number Two</p>
+        <p data-person="Sayed">This Is Very Very Long Comment Number Three</p>
+    </div>
+    
+    <!--Assignment 4-->
+    <div class="assignment4">
+        <p>This Is Very Very Long Product Title</p>
+        <p>This Is Very Very Long Product Title</p>
+        <p>This Is Very Very Long Product Title</p>
+        <p>This Is Very Very Long Product Title</p>
+        <p>This Is Very Very Long Product Title</p>
+        <p>This Is Very Very Long Product Title</p>
+    </div>
+</body>
+</html>
