@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position ,List and Table</title>
+    <style>
+        body{padding:20px;}
+        div.parent{position: relative;margin: 20px auto;height: 200px;}
+        div.parent div{position: absolute;width:100px;height:100px}
+        div.parent div.green{background-color: rgb(83, 193, 83);z-index:2;left:10px;}
+        div.parent div.red{background-color:rgb(214, 67, 67) ;z-index: 3;left:20px;top:10px;}
+        div.parent div.blue{background-color: rgb(79, 141, 170);z-index: 1;top:-15px}
+        div.parent div.black{background-color: rgb(53, 52, 52);z-index: 0;}
+        .clear{clear: both;}
+        div.assignment2{font-size:17px;text-align:center;background-color: #eee;width:400px;margin: 20px auto;position: relative;padding:15px;border-width: 5px;border-style: solid;border-color: rgb(254, 92, 28) rgb(83, 160, 219);}
+        div.assignment2 span{padding:5px 15px;font-weight:bold;color:#fff;background-color: rgb(83, 160, 219);position:absolute;}
+        div.assignment2 span.top-left{top:-20px;left:-20px;border-right:3px solid rgb(254, 92, 28)}
+        div.assignment2 span.bottom-left{bottom:-20px;left:-20px;border-right:3px solid rgb(254, 92, 28)}
+        div.assignment2 span.top-right{top:-20px;right:-20px;border-left:3px solid rgb(254, 92, 28)}
+        div.assignment2 span.bottom-right{bottom:-20px;right:-20px;border-left:3px solid rgb(254, 92, 28)}
+
+        
+        ul:first-of-type {list-style: none;margin:70px auto}
+        ul:first-of-type li {background: #eee;margin: 10px; padding: 10px;box-sizing: border-box;}
+        ul:first-of-type li ol,ul:first-of-type li ul{box-sizing: border-box;}
+        ul:first-of-type li ol li,ul:first-of-type li ul li{background-color: #fff;box-sizing: border-box;}
+        ul:first-of-type li:nth-of-type(2) ol{list-style:upper-roman;}
+        ul:first-of-type li ul{list-style: circle;list-style-position: inside;margin:0;}
+
+        table{width:700px;background-color: #eee;border: 1px solid #fff;border-collapse: collapse;margin:10px auto}
+        table td,table th{padding:10px;text-align: center;border: 1px solid #fff;}
+        table th{background-color: #444;color:#fff}
+        table td img {width:100px ; height:100px;border: 1px solid #fff;}
+        table td a.view,table td a.delete{color: #fff; display:inline-block;background-color: rgb(222, 64, 161);margin:10px;padding: 5px 10px;text-decoration: none;border: 1px solid #fff;}
+        table td a.delete{background-color: rgb(56, 138, 214);}
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="green"></div>
+        <div class="red"></div>
+        <div class="blue"></div>
+        <div class="black"></div>
+    </div>
+    <!--Assignment2-->
+    <div class="assignment2">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod, sed. Ea ipsum
+        similique quasi rem, fugiat voluptatibus reiciendis nam debitis earum quo veniam
+        laudantium mollitia atque! Laborum ea nam doloribus.
+        <span class="top-left">1</span>
+        <span class="bottom-left">2</span>
+        <span class="top-right">3</span>
+        <span class="bottom-right">4</span>
+    </div>
+    
+    <!--Assignment3-->
+    <ul>
+        <li>
+            HTML
+            <ol start="10">
+                <li>Slim</li>
+                <li>Pugjs</li>
+                <li>HAML</li>
+            </ol>
+        </li>
+        <li>
+            CSS
+            <ol start="10">
+                <li>SASS</li>
+                <li>LESS</li>
+                <li>PostCSS</li>
+            </ol>
+        </li>
+        <li>
+            JavaScript
+            <ul>
+                <li>Vuejs</li>
+                <li>Sveltejs</li>
+            </ul>
+        </li>
+    </ul>
+    <!--Assignment4-->
+    <table>
+        <thead>
+            <tr>
+                <th>Avatar</th>
+                <th>Group</th>
+                <th>Name</th>
+                <th>Points</th>
+                <th>Control</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img src="../imgs/Ninja.png"></td>
+                <td>Ninja</td>
+                <td>Ahmed Mohamed</td>
+                <td>120</td>
+                <td>
+                    <a href="#" class="view" target="_blank" rel="no-ref"> View</a>
+                    <a href="#" class="delete" target="_blank" rel="no-ref"> Delete</a>
+                </td>
+            </tr>
+            
+            <tr>
+                <td><img src="../imgs/Ninja2.jpg"></td>
+                <td rowspan="2">shades</td>
+                <td>Shady Nabil</td>
+                <td>180</td>
+                <td>
+                    <a href="#" class="view" target="_blank" rel="no-ref"> View</a>
+                    <a href="#" class="delete" target="_blank" rel="no-ref"> Delete</a>
+                </td>
+            </tr>
+            
+            <tr>
+                <td><img src="../imgs/Ninja.png"></td>
+                <td>Eman Mohamed</td>
+                <td>160</td>
+                <td>
+                    <a href="#" class="view" target="_blank" rel="no-ref"> View</a>
+                    <a href="#" class="delete" target="_blank" rel="no-ref"> Delete</a>
+                </td>
+            </tr>
+            
+            <tr>
+                <td><img src="../imgs/Ninja2.jpg"></td>
+                <td rowspan="2">Valhala</td>
+                <td>Mohamed Ibrahim</td>
+                <td>190</td>
+                <td>
+                    <a href="#" class="view" target="_blank" rel="no-ref"> View</a>
+                    <a href="#" class="delete" target="_blank" rel="no-ref"> Delete</a>
+                </td>
+            </tr>
+            
+            <tr>
+                <td><img src="../imgs/Ninja.png"></td>
+                <td>Noor Atef</td>
+                <td>110</td>
+                <td>
+                    <a href="#" class="view" target="_blank" rel="no-ref"> View</a>
+                    <a href="#" class="delete" target="_blank" rel="no-ref"> Delete</a>
+                </td>
+            </tr>
+            
+            <tr>
+                <td><img src="../imgs/Ninja2.jpg"></td>
+                <td>Union</td>
+                <td>Mohamed Ibrahim</td>
+                <td>90</td>
+                <td>
+                    <a href="#" class="view" target="_blank" rel="no-ref"> View</a>
+                    <a href="#" class="delete" target="_blank" rel="no-ref"> Delete</a>
+                </td>
+            </tr>
+            
+        </tbody>
+    </table>
+</body>
+</html>
