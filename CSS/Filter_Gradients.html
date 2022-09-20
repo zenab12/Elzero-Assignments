@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filters and Gradients</title>
+    <style>
+        .assignment1{background-color: #eee;text-align: center;margin: 20px auto;width:600px;padding:10px;border-image:linear-gradient(to right,red 0%,red 20%,rgb(31, 149, 149)  20%, rgb(31, 149, 149) 40%,rgb(48, 156, 48) 40%,rgb(48, 156, 48) 60%,rgb(193, 50, 74) 60%, rgb(193, 50, 74) 80%,rgb(172, 32, 172)  80%,rgb(172, 32, 172) 100%);border-image-width: 6px;
+border-style: solid;border-image-repeat: stretch;border-image-slice: 20;}
+        .assignment1::first-letter{color:rgb(87, 21, 21)}
+        form{margin:20px auto; width:600px;display: flex;flex-flow: column wrap;justify-content: space-between;gap:20px;padding:10px;position: relative;}
+        input{caret-color: red;border: none;background-color: #eee;padding: 10px;position: relative;display: block; border-image: linear-gradient(to right,rgb(230, 51, 51) 0%, rgb(230, 51, 51) 50%,rgb(48, 156, 48) 50%);border-style:solid;border-image-repeat: stretch;border-image-slice: 50;border-top:#eee}
+        form input::after
+        {
+            content: "";
+            width: 100%;
+            height:5px;
+            display: block;
+            position: absolute;
+            bottom: 0px;
+            left:0px;
+            background: linear-gradient(to right,rgb(230, 51, 51) 0%, rgb(230, 51, 51) 50%,rgb(48, 156, 48) 50%);;
+        }
+    </style>
+</head>
+<body>
+    <!--assignment1-->
+    <div class="assignment1">Elzero</div>
+    <!--assignment2-->
+    <form action="#" method="get">
+        <input type="text" placeholder="One" value="Elzero"/>
+        <input type="text" placeholder="Two" value=""/>
+        <input type="text" placeholder="Three" value=""/>
+
+    </form>
+</body>
+</html>
