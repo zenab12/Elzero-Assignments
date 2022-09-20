@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        .assignment1{width:100px;height:100px;margin:50px auto;display: flex;align-items: center;justify-content: center;box-shadow: 5px 0px 0px #c61,-5px 0px 0px #16c;color:#c61;font-weight:bold;background-color: #eee;border-radius:50%;}
+        .assignment2,.assignment3,.assignment4 ,.assignment5{width:600px;height:300px;margin:20px auto;display: flex;justify-content: start;flex-wrap: wrap;gap: 0px 10px;box-sizing: border-box;background-color: #eee;padding:10px;align-items:start;align-content: space-between;}
+        .assignment2 div,.assignment3 div,.assignment4 div ,.assignment5 div {display: flex;justify-content: center;align-items: center;padding:5px;text-align: center;color:#fff;background-color: #c61;width:calc(100% / 3 - 20px);flex:1 1 auto}
+    
+        .assignment3{align-content: stretch;align-items:stretch;}
+        .assignment3 div {background-color: rgb(55, 54, 64)}
+        .assignment3 div.one{order:6;align-self: flex-end;}
+        .assignment3 div.two{order:5;}
+        .assignment3 div.three{order:2;align-self: flex-start;}
+        .assignment3 div.four{order:3;}
+        .assignment3 div.five{order:4;}
+        .assignment3 div.six{order:1}
+        
+        .assignment4{flex-direction: column;justify-content: stretch;align-items: flex-end;align-content:stretch;}
+        .assignment4 div{background-color:rgb(58, 147, 129) ;width: auto;}
+        .assignment4 div.one{ flex: 1 1 auto;}
+        .assignment4 div.two{align-self: flex-start; flex: 2 1 auto;width:50%}
+        .assignment4 div.three{flex: 1 1 auto;}
+
+        .assignment5{justify-content: space-between;align-content: stretch;}
+        .assignment5 div{flex: 0 1 100px;height:calc(100%/2 - 10px);}
+        .assignment5 div.one{order:2;background-color: #c61;}
+        .assignment5 div.two{align-self:end;order:3;background-color: rgb(148, 219, 47);}
+        .assignment5 div.three{order:4;background-color: rgb(106, 54, 11);}
+        .assignment5 div.four{align-self:end;order:1;background-color: rgb(81, 7, 141);}
+
+        :root{--main-color:#eee;--secondary-color:#ccc}
+        .page{padding:10px;display: flex;flex-flow:column wrap;justify-content: space-between;width:600px;height:400px;margin: 20px auto;background-color: var(--main-color);}
+        .page *{padding: 5px;;margin: 0px;}
+        .page .header,.page .main-area,.page .footer{display: flex;justify-content: space-between;gap:10px;}
+        .page .header .logo{flex:1 1 auto;text-align: center;background-color: var(--secondary-color);}
+        .page .header .links{flex:5 1 auto;list-style: none;display:flex;justify-content: end;align-items: center;background-color: var(--secondary-color)}
+        
+        .page .main-area{justify-self: stretch;flex-grow: 5;}
+        .page .main-area .content{flex:5 1 auto;background-color: var(--secondary-color);}
+        .page .main-area .sidebar{flex:2 1 auto;background-color: var(--secondary-color)}
+        
+        .page .footer{justify-content: stretch;gap:0}
+        .page .footer .copyright{flex:100 1 auto;background-color: var(--secondary-color);align-self: flex-end;}
+        .page .footer .design{flex:1 1 auto;background-color: var(--secondary-color);align-self: flex-end;}
+
+    </style>
+</head>
+<body>
+    <!--Assignment1-->
+    <div class="assignment1">Elzero</div>
+    <hr>
+    <!--Assignment1-->
+    <div class="parent assignment2">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+    
+    <!--Assignment3-->
+    <div class="parent assignment3">
+        <div class="one">1</div>
+        <div class="two">2</div>
+        <div class="three">3</div>
+        <div class="four">4</div>
+        <div class="five">5</div>
+        <div class="six">6</div>
+    </div>
+    
+    <!--Assignment4-->
+    <div class="parent assignment4">
+        <div class="one">1</div>
+        <div class="two">2</div>
+        <div class="three">3</div>
+    </div>
+    
+    <!--Assignment5-->
+    <div class="parent assignment5">
+        <div class="one">1</div>
+        <div class="two">2</div>
+        <div class="three">3</div>
+        <div class="four">4</div>
+    </div>
+    
+    <!--Assignment6-->
+    <div class="page">
+        <div class="header">
+            <div class="logo">Logo</div>
+            <ul class="links">
+                <li>Home</li>
+                <li>About</li>
+                <li>Services</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+        <div class="main-area">
+            <div class="content">Content</div>
+            <div class="sidebar">Sidebar</div>
+        </div>
+        <div class="footer">
+            <div class="copyright">Copyright 2021</div>
+            <div class="design">Designed By Elzero</div>
+        </div>
+    </div>
+</body>
+</html>
