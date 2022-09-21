@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform 2D</title>
+    <style>
+    
+    *{box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    }
+    
+    .assignment1{width:200px;background-color: #ddd;text-align: center;padding:40px;color:#39c;position: relative;margin:100px auto 200px}
+    .assignment1::after{content: "";position: absolute;display: block;top:0px;left:0;transform: rotate(174deg);background-color: #39c;width:100%;height: 100%;z-index: -1;}
+    .assignment1::before{content: "";position: absolute;display: block;top:0;left:0;transform: rotate(184deg);background-color: rgb(204, 51, 130);width:100%;height: 100%;z-index: -2;}
+    
+    .assignment2{background-color: #ddd;position:relative;transform: translate(-50%,-50%); width:200px;height:200px;border-radius: 50%;left:50%;top:50%;display:  flex;justify-content: center;align-items: center;}
+    .assignment2 .pink-border{position:absolute;left:0;top:0;width:100%;height:100%;border-radius: 50%;border:10px solid rgb(204, 51, 130);border-left-color: #fff;top:0px;left:0px;transform: rotate(0deg);transition: all .2s ease-in;}
+    .assignment2 .blue-border{position:absolute;width:110%;height:110%;border-radius: 50%;top:-10px;left:-10px;border:10px solid #39c;border-right-color: #fff;transform: rotate(0deg);transition: all .2s ease-out;transition-delay:.2s;}
+    
+    .assignment2:hover .pink-border{transform: rotate(-360deg);}
+    .assignment2:hover .blue-border{transform: rotate(360deg);}
+
+    
+    
+    </style>
+</head>
+<body>
+    <!--assignment1-->
+    <div class="assignment1">Elzero</div>
+    
+    <!--assignment1-->
+    <div class="assignment2">
+    <div class="pink-border"></div>
+    <div class="blue-border"></div>
+    Elzero
+    </div>
+</body>
+</html>
