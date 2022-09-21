@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+        body
+        {
+            font-weight: bold;
+        }
+        /* assignment 1*/
+        
+        .assignment1.grid {
+            counter-reset: count;
+            counter-increment: count;
+            background-color: #ddd;
+            padding: 20px;
+            width: 800px;
+            height: 400px;
+            margin: 20px auto;
+            display:grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: 50px auto;
+            gap:10px;
+            }
+            
+        .assignment1.grid div 
+        {
+            background-color:rgb(73, 86, 112);
+            color:#fff;
+            display: grid;
+        }
+        
+        .assignment1.grid div::before
+        {
+            content:"Element "counter(count);
+            display: grid;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        /*Assignment 2*/
+        .assignment2.layout
+        {   
+            width:100%;
+            height:500px;
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            grid-template-rows: 50px auto 50px;
+            grid-template-areas: 'header header header header header' 
+                                ' section section section section aside'
+                                'footer footer footer footer footer'
+            ;
+            color:#fff;
+        }
+        .assignment2.layout > *{padding:15px;}
+        .assignment2.layout header
+        {
+            grid-area: header;
+            background-color: rgb(84, 152, 215);
+        }
+        .assignment2.layout header::before
+        {
+        content: "Header";
+        display: grid;
+        }
+
+        
+        .assignment2.layout section
+        {
+            grid-area: section;
+            background-color: rgb(223, 113, 34);
+        }
+        .assignment2.layout section::before
+        {
+        content: "Section";
+        display: grid;
+        }
+        .assignment2.layout aside
+        {
+            grid-area: aside;
+            background-color: rgb(94, 95, 120);
+        }
+        .assignment2.layout aside::before
+        {
+        content: "Aside";
+        display: grid;
+        }
+        
+        .assignment2.layout footer
+        {
+            grid-area: footer;
+            background-color: rgb(52, 132, 95);
+        }
+        .assignment2.layout footer::before
+        {
+        content: "Footer";
+        display: grid;
+        }
+        
+        
+        /*Assignment 3*/
+        
+        .assignment3.grid ,.assignment4.grid,.assignment5.grid {
+            background-color: #ddd;
+            padding: 20px;
+            width: 800px;
+            height: 400px;
+            margin: 30px auto;
+            display: grid;
+            justify-content: space-between;
+            gap:20px;
+            }
+            
+        .assignment3.grid
+        {
+            grid-template-columns: auto repeat(2,1fr) auto;
+            grid-template-rows:auto 30px;
+        }
+        .assignment3.grid div , .assignment4.grid div ,.assignment5.grid div
+        {
+            background-color: rgb(63, 58, 58);
+            color:#fff;
+            display: grid;
+            place-items: center;
+            place-content: center;
+        }
+        
+        .assignment4.grid{grid-template-columns:repeat(5,minmax(30px,1fr));grid-template-rows: repeat(6,1fr);}
+        .assignment4.grid div {background-color: #39e;}
+        .assignment4.grid div.one{
+            grid-area:6/1/7/6;
+        }
+        .assignment4.grid div.two{
+            grid-area:2/1/3/4;
+        }
+        .assignment4.grid div.three{
+            grid-area:2/4/3/6;
+        }
+        
+        .assignment4.grid div.four{
+            grid-area:3/1/4/3;
+        }
+        
+        .assignment4.grid div.five{
+            grid-area:3/3/6/6;
+        }
+        .assignment4.grid div.six{
+            grid-area:4/1/5/3;
+        }
+        .assignment4.grid div.seven{
+            grid-area:5/1/6/3;
+        }
+        .assignment4.grid div.eight{
+            grid-area:1/1/2/6;
+        }
+    
+    
+    .assignment5.grid{grid-template-columns:repeat(2,minmax(30px,1fr));grid-template-rows: repeat(2,auto);align-content: space-between;}
+
+    .assignment5.grid div {background-color: #e91e63;}
+
+    .assignment6.article {display:grid;grid-template-columns:repeat(4,auto);grid-template-rows: repeat(4,auto);
+    grid-template-areas: 'one one two three'
+                        ' four five five three'
+                        ' four six six three'
+                        'seven eight nine ten'
+    ;gap:10px;background-color: #ddd;padding:80px;}
+    
+    .assignment6.article > div{position:relative; background-color:#fff;border-bottom: 3px solid#fb3200;padding:15px;display: grid;gap:10px;padding-bottom: 50px;}
+    .assignment6.article div h4{color:#a1a5b1;font-size: 14px;}
+    .assignment6.article div p.summary{font-size: 16px;font-weight: bold;}
+    .assignment6.article div p.description{font-size: 15px;font-weight: lighter;}
+
+    .assignment6.article div.one{grid-area: one;}
+    .assignment6.article div.two{grid-area: two;}
+    .assignment6.article div.three{grid-area: three;align-content: flex-start;gap:30px;background-color: #000;color:#fff}
+    .assignment6.article div.four{grid-area: four;}
+    .assignment6.article div.five{grid-area: five;background-color: #000;color:#fff}
+    .assignment6.article div.six{grid-area: six;}
+    .assignment6.article div.seven{grid-area: seven;}
+    .assignment6.article div.eight{grid-area: eight;background-color: #000;color:#fff}
+    .assignment6.article div.nine{grid-area: nine;}
+    .assignment6.article div.ten{grid-area: ten;}
+
+
+    .assignment6.article > div::after{content:'"';position:absolute;bottom: -15px;right:10px;font-size: 45px;color: #b2b2b2;font-family:Arial, Helvetica, sans-serif;transform: rotate(10deg);}
+
+    </style>
+</head>
+<body>
+    <!--assignment1-->
+    <div class="grid assignment1">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    
+    <!--assignment2-->
+    <div class="layout assignment2">
+        <header></header>
+        <section></section>
+        <aside></aside>
+        <footer></footer>
+    </div>
+    
+    <!--assignment3-->
+    <div class="grid assignment3">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+    </div>
+    
+    <!--assignment 4-->
+    <div class="grid assignment4">
+        <div class="one">1</div>
+        <div class="two">2</div>
+        <div class="three">3</div>
+        <div class="four">4</div>
+        <div class="five">5</div>
+        <div class="six">6</div>
+        <div class="seven">7</div>
+        <div class="eight">8</div>
+    </div>
+    
+    <!--assignment 5-->
+    <div class="grid assignment5">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+    
+    <!--Assignment 6-->
+    <div class="assignment6 article">
+        <div class="one">
+            <div class="name-job">
+                <h3>Osama Mohamed</h3>
+                <h4>Full-Stack Developer</h4>
+            </div>
+            <p class="summary">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi quae porro tempore earum. Saepe incidunt dolor dolorum iusto et ipsum ut quam, blanditiis vitae reiciendis iure! Ducimus debitis necessitatibus pariatur.</p>
+            <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed, dicta quaerat ipsum adipisci tenetur fuga tempore odit minus impedit nihil in repellendus. Deleniti optio modi vel earum quisquam nemo error.</p>
+        </div>
+    
+        <div class="two">
+            <div class="name-job">
+                <h3>Ahmed Sayed</h3>
+                <h4>IOS Developer</h4>
+            </div>
+            <p class="summary">Lorem, ipsum dolor sit amet consectetur adipisicing elit. fuga tempore odit minus impedit nihil in repellendus. Deleniti.</p>
+            <p class="description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi quae porro tempore earum. Saepe incidunt dolor dolorum iusto et ipsum ut quam, blanditiis.</p>
+
+        </div>
+
+        <div class="three">
+            <div class="name-job">
+                <h3>Shady Nabil</h3>
+                <h4>Full-Stack Developer</h4>
+            </div>
+            <p class="summary">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi quae porro tempore earum. Saepe incidunt dolor dolorum iusto et ipsum ut quam, blanditiis vitae reiciendis iure! Ducimus debitis necessitatibus pariatur.</p>
+            <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed, dicta quaerat ipsum adipisci tenetur fuga tempore odit minus impedit nihil in repellendus. Deleniti optio modi vel earum quisquam nemo error. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero enim voluptates a quod deleniti quidem nostrum, dolorem ipsam laborum. Nulla voluptatibus incidunt unde ipsum quibusdam quam iure, soluta reprehenderit iusto! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam porro sint praesentium nemo? Repellendus voluptate beatae consequatur ab libero placeat, fuga recusandae excepturi optio molestias asperiores alias laboriosam quae possimus!</p>
+        </div>
+
+        <div class="four">
+            <div class="name-job">
+                <h3>Mohamed Ibrahim</h3>
+                <h4>.Net Developer</h4>
+            </div>
+            <p class="summary">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi quae porro tempore earum. Saepe incidunt dolor dolorum iusto et ipsum ut quam, blanditiis vitae reiciendis iure! Ducimus debitis necessitatibus pariatur.</p>
+            <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed, dicta quaerat ipsum adipisci tenetur fuga tempore odit minus impedit nihil in repellendus. Deleniti optio modi vel earum quisquam nemo error. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum a sint eveniet nemo necessitatibus optio. Doloribus ipsam quis earum voluptates voluptatum harum tempora pariatur, consectetur ad neque aperiam. Inventore, officiis!. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis iusto modi quisquam esse illum accusantium delectus beatae numquam eos vero tempore cumque, aspernatur eligendi quam ipsam quo tenetur fuga odit!</p>
+        </div>
+
+        <div class="five">
+            <div class="name-job">
+                <h3>Mahmoud Mohamed</h3>
+                <h4>Full-Stack Developer</h4>
+            </div>
+            <p class="summary">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi quae porro tempore earum. Saepe incidunt dolor dolorum iusto et ipsum ut quam, blanditiis vitae reiciendis iure! Ducimus debitis necessitatibus pariatur.</p>
+            <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed, dicta quaerat ipsum adipisci tenetur fuga tempore odit minus impedit nihil in repellendus. Deleniti optio modi vel earum quisquam nemo error. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, asperiores! Ad itaque adipisci reprehenderit culpa, explicabo repellat exercitationem laudantium cumque eum libero sed dolores nemo facere, officiis id, nam fugit!</p>
+        </div>
+
+        <div class="six">
+            <div class="name-job">
+                <h3>Ezz Elden</h3>
+                <h4>Front-End Developer</h4>
+            </div>
+            <p class="summary">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi quae porro tempore earum. Saepe incidunt dolor dolorum iusto et ipsum ut quam, blanditiis vitae reiciendis iure! Ducimus debitis necessitatibus pariatur.</p>
+            <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed, dicta quaerat ipsum adipisci tenetur fuga tempore odit minus impedit nihil in repellendus. Deleniti optio modi vel earum quisquam nemo error. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis tenetur, tempora sapiente eum possimus pariatur. Eum vel dolorem, asperiores quam veniam officia id. Incidunt cumque laudantium ea eaque doloremque repudiandae?</p>
+        </div>
+
+        <div class="seven">
+            <div class="name-job">
+                <h3>Mohamed Sayed</h3>
+                <h4>IOS Developer</h4>
+            </div>
+            <p class="summary">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed, dicta quaerat ipsum adipisci tenetur fuga tempore odit minus impedit nihil in repellendus. Deleniti optio modi vel earum quisquam nemo error.</p>
+        </div>
+        
+        <div class="eight">
+            <div class="name-job">
+                <h3>Ibrahim Sayed</h3>
+                <h4>IOS Developer</h4>
+            </div>
+            <p class="summary">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed, dicta quaerat ipsum adipisci tenetur fuga tempore odit minus impedit nihil in repellendus. Deleniti optio modi vel earum quisquam nemo error.</p>
+        </div>
+                
+        <div class="nine">
+            <div class="name-job">
+                <h3>Gamal Sayed</h3>
+                <h4>IOS Developer</h4>
+            </div>
+            <p class="summary">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed, dicta quaerat ipsum adipisci tenetur fuga tempore odit minus impedit nihil in repellendus. Deleniti optio modi vel earum quisquam nemo error.</p>
+        </div>
+
+        <div class="ten">
+            <div class="name-job">
+                <h3>Eman Sayed</h3>
+                <h4>IOS Developer</h4>
+            </div>
+            <p class="summary">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed, dicta quaerat ipsum adipisci tenetur fuga tempore odit minus impedit nihil in repellendus. Deleniti optio modi vel earum quisquam nemo error.</p>
+        </div>
+
+</div>
+</body>
+</html>
