@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+        @media print
+        {
+            div.assign-one{font-size:40px;}
+        }
+        
+        *
+        {
+            box-sizing: border-box;
+        }
+        
+        .parent{display:grid;grid-template-columns: repeat(1,1fr);grid-template-rows:repeat(4,1fr) ;margin:10px;gap:10px;}
+        .parent .product{background-color: rgb(246, 244, 244);display: flex;place-items: center;place-content: center;flex-flow:column wrap;padding: 5px;}
+        .parent .product h2{font-size:18px}
+        .parent .product p{margin-top:5px}
+        @media(max-width:767px)
+        {
+        }
+        
+        @media(min-width:768px)
+        {
+            .parent{grid-template-columns: repeat(2,1fr);grid-template-rows:repeat(2,1fr)}
+            .parent.assign-three{grid-template-columns: repeat(3,1fr);grid-template-rows:repeat(2,1fr)}
+            .parent.assign-three .product:first-of-type{grid-area:1/1/2/4}
+            .parent .product h2{color:#e00};
+
+        }
+        @media(min-width:992px)
+        {
+            .parent{grid-template-columns: repeat(4,1fr);grid-template-rows:repeat(1,1fr)}
+            .parent.assign-three{grid-template-columns: repeat(2,1fr);grid-template-rows:repeat(3,1fr)}
+            .parent.assign-three .product:first-of-type{grid-area:1/1/2/3}
+            .parent.assign-three .product:last-of-type{grid-area:3/1/4/3}
+            .parent .product h2{color:#1aa};
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="assign-one">Elzero Web School</div>
+    
+    <div class="parent assign-two">
+        <div class="child product">
+            <h2>Product One</h2>
+            <p>This Product</p>
+        </div>
+        <div class="child product">
+            <h2>Product Two</h2>
+            <p>This Product</p>
+        </div>
+        <div class="child product">
+            <h2>Product Three</h2>
+            <p>This Product</p>
+        </div>
+        <div class="child product">
+            <h2>Product Four</h2>
+            <p>This Product</p>
+        </div>
+    </div>
+    <hr>
+    
+    <div class="parent assign-three">
+        <div class="child product">
+            <h2>Product One</h2>
+            <p>This Product</p>
+        </div>
+        <div class="child product">
+            <h2>Product Two</h2>
+            <p>This Product</p>
+        </div>
+        <div class="child product">
+            <h2>Product Three</h2>
+            <p>This Product</p>
+        </div>
+        <div class="child product">
+            <h2>Product Four</h2>
+            <p>This Product</p>
+        </div>
+    </div>
+</body>
+</html>
