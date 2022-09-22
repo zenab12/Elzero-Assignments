@@ -2,7 +2,7 @@
 
 ## HTML
 
- - [Elements And Comments ](https://zenab12.github.io/Elzero-Assignments/HTML/Elements_And_Comments.html)
+ - [Elements And Comments](https://zenab12.github.io/Elzero-Assignments/HTML/Elements_And_Comments.html)
  - [Heading And Attributes ](https://zenab12.github.io/Elzero-Assignments/HTML/Heading_And_Attributes.html)
  - [Link, Image, List ](https://zenab12.github.io/Elzero-Assignments/HTML/Link_Image_List.html)
  - [Table, Div ](https://zenab12.github.io/Elzero-Assignments/HTML/Table_Div.html)
