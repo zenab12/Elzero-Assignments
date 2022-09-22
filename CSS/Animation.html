@@ -1,0 +1,123 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        
+    .assignment1{width:50px;height:50px;background-color: #fff;text-align: center;padding:40px;color:#39c;position: relative;margin:100px auto 100px;border-radius:50%; border:5px solid rgb(204, 51, 130) ;border-right-color: transparent;animation: spinner 1s linear infinite;}
+    .assignment1::after{content: "";position: absolute;display: block;top:-23px;left:-23px;border:5px solid  #f50;width:130%;height: 130%;z-index: -3;border-radius: 50%;border-top-color: transparent;}
+    .assignment1::before{content: "";position: absolute;display: block;top:-14px;left:-14px;border:5px solid #39c;width:115%;height: 115%;z-index: -2;border-radius: 50%;border-left-color: transparent;}
+    
+        
+    @keyframes spinner {
+        to{transform: rotate(360deg);}
+    }
+    .assignment1:hover{animation-play-state: paused;}
+    
+    /*assignment 2*/
+    .assignment2 {transform: rotate(0deg);margin: 100px auto;width:115px;height:100px;position:relative;}
+    .assignment2 div{width:50px;height:50px;padding:20px;margin:10px;border-width:6px;border-style: solid;border-radius: 50%;position: absolute;z-index: -1;}
+    .assignment2 .one{border-color:#000;border-bottom-color:transparent;top:0;left:0;width:50px;height:50px;animation-duration: 1s;}
+    .assignment2 .two{border-color:#f50;border-bottom-color:transparent;top:10px;left:10px;width:30px;height:30px;animation-duration: 2s;}
+    .assignment2 .three{border-color: #39c;border-bottom-color: transparent;top:20px;left:20px;width:10px;height:10px;animation-duration: 3s;}
+    
+    .assignment2:hover .one{
+        animation: spinner2 3s linear backwards infinite;
+    }
+
+    .assignment2:hover .two{
+        animation: spinner2 2s linear backwards infinite;
+    }
+    .assignment2:hover .three{
+        animation: spinner2 1s linear backwards infinite;
+    }
+    
+    @keyframes spinner2 {
+        0%{transform: rotate(90deg);}
+        25%{transform: rotate(180deg);}
+        50%{transform: rotate(270deg);}
+        100%{transform: rotate(360deg);}
+    }
+    
+    .spinner{display:block;border-radius:50%;width:50px;height:50px;margin:50px auto;background-color: #eee;border:5px solid #000;border-top-color:transparent;animation: spinning 1s linear reverse infinite;}
+    
+    @keyframes spinning {
+        to{transform: rotate(360deg);}
+    }
+    
+    
+    /*assignment 5*/
+    .char-animation{width:600px;height:600px;background-color: #ddd;margin: 30px auto;display:grid;position: relative;
+    grid-template-columns: repeat(7,1fr);
+    grid-template-rows: repeat(3,80px);
+    grid-template-areas:'one two two  . five . .' 
+                        'one three three  . five . .' 
+                        'one four four .  five six seven';
+    row-gap:180px}
+    .char-animation div{background-color: #333;}
+    .char-animation .one{grid-area: one;}
+    .char-animation .two{grid-area: two;}
+    .char-animation .three{grid-area: three;}
+    .char-animation .four{grid-area: four;}
+    .char-animation .five{grid-area: five;}
+    .char-animation .six{grid-area: six;}
+    .char-animation .seven{grid-area: seven;}
+
+    .char-animation .orange-square
+    {background-color: #f50;width:50px;height:50px;position:absolute;  top: 12px;left: 196px;animation: square 4s linear;}
+    
+    .char-animation  .orange-square2
+    {position:absolute;top:90% ;left:100%;opacity: 0;animation: squaretwo 4s linear;animation-delay: 4s;}
+    
+    @keyframes square {
+    0%{top:2.5% ;left:196px;}
+    10%{top:2.5%;left:18px}
+    20%{top:46%;left:16px}
+    30%{top:46%;left:196px}
+    40%{top:46%;left:18px}
+    60%{top:89.5%;left:18px}
+    70%{top:89.5%;left:196px}
+    80%{top:89.5%;left:18px}
+    90%{top:2.5%;left:18px}
+    100%{top:2.5% ;left:196px;} 
+    }
+    
+    @keyframes squaretwo {
+    0%{top:90% ;left:100%;opacity: .3;}
+    50%{top:90%;left:59.5%;opacity:1}
+    90%{top:4%;left:59.5%;opacity: 1;}
+    100%{top:2.5%;left:59.5%;opacity: .3;}
+    }
+    
+    </style>
+</head>
+<body>
+    <div class="assignment1"></div>
+    <div class="assignment2">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+
+    </div>
+    
+    <span class="spinner"></span>
+
+<!--assignment 5-->
+    
+    <div class="char-animation">
+        <div class="one col"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+        <div class="four"></div>
+        <div class="five col"></div>
+        <div class="six"></div>
+        <div class="seven"></div>
+        <div class="orange-square"></div>
+        
+        <div class="orange-square2 orange-square"></div>
+
+    </div>
+</body>
+</html>
