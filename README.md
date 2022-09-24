@@ -1,4 +1,4 @@
-# Elzero-Assignments in HTML5 and CSS
+# Elzero-Assignments in HTML5 , CSS and Scss
 
 - Langauges Used 
  - [HTML](#HTML)
