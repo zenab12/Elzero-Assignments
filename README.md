@@ -48,6 +48,10 @@
  ## Scss
  
 - [Nesting and Variables](https://github.com/zenab12/Elzero-Assignments/tree/main/Sass/Nesting_Variables.scss)
+- [Control-flow and interpolation](https://github.com/zenab12/Elzero-Assignments/blob/main/Sass/Ctrlflow_interpolate.scss)
+- [Mixins and Loops](https://github.com/zenab12/Elzero-Assignments/blob/main/Sass/mixins.scss)
+- [Functions](https://github.com/zenab12/Elzero-Assignments/blob/main/Sass/Functions.scss)
+
 ## Fav 
 ![Screenshot 2022-09-23 at 00-54-48 Grid](https://user-images.githubusercontent.com/78083890/191865505-8a15fae9-a4be-48f9-aac0-c1db65e7c2fb.png)
 ![Screenshot 2022-09-23 at 00-55-51 Animation](https://user-images.githubusercontent.com/78083890/191865518-8e68ccf7-06e0-4fb7-94eb-94d6f74d509f.png)
