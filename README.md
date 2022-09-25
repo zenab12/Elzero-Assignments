@@ -1,10 +1,10 @@
 # Elzero-Assignments in HTML5 , CSS and Scss
 
-- Langauges Used 
+- ## Langauges Used 
  - [HTML](#HTML)
  - [CSS](#CSS)
  - [Scss](#Scss)
-- [Most Taks I Loved](#Fav)
+- ##[Most Taks I Loved](#Fav)
 
 
 ## HTML
